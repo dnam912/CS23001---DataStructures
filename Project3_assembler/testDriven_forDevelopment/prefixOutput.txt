@@ -1,0 +1,13 @@
+[ data3-1.txt PREFIX ]
++AX*BC
+/+AX*BCY-DE
+*+AB+CE
+*AX*BX*++CYAYBYCX
++*H***+A*+BCDFGEJ
+
+[ data3-2-1.txt PREFIX ]
+*A*BC
++-A*BCE
+/+A*BC-DE
+-/*ABC*+DEF
++*AXBX+****-CXDYEXFXGYHXJY

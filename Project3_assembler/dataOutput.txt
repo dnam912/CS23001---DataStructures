@@ -1,0 +1,38 @@
+------------------------------------------------------- 
+Infix: ( AX + ( B * C ) ) ;
+
+Postfix: AX B C * +
+Prefix: + AX * B C
+
+C B * AX +
+------------------------------------------------------- 
+Infix: 
+( ( AX + ( B * CY ) ) / ( D - E ) ) ;
+
+Postfix: AX B CY * + D E - /
+Prefix: / + AX * B CY - D E
+
+
+------------------------------------------------------- 
+Infix: 
+( ( A + B ) * ( C + E ) ) ;
+
+Postfix: A B + C E + *
+Prefix: * + A B + C E
+
+
+------------------------------------------------------- 
+Infix: 
+( AX * ( BX * ( ( ( CY + AY ) + BY ) * CX ) ) ) ;
+
+Postfix: AX BX CY AY + BY + CX * * *
+Prefix: * AX * BX * + + CY AY BY CX
+
+
+------------------------------------------------------- 
+Infix: 
+( ( H * ( ( ( ( A + ( ( B + C ) * D ) ) * F ) * G ) * E ) ) + J ) ;
+
+Postfix: H A B C + D * + F * G * E * * J +
+Prefix: + * H * * * + A * + B C D F G E J
+

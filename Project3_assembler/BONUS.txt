@@ -1,0 +1,30 @@
+BONUS ASSIGNMENTS: 
+
+1. String convertInfixToPrefix(const String&);
+2. String convertPrefixIntoAssembly(const String&);
+
+----> in utilities.hpp/cpp
+
+
+
+1. To TEST 'coverting Infix To Prefix'
+----> RUN makefile postfix
+----> ./postfix [input file] dataOutput.txt
+
+
+2. To TEST 'coverting Prefix Into Assembly'
+----> RUN makefile assembly
+----> ./assembly [input file] assemblerOutput.txt
+
+
+--------------------------------------------------------------------------------
+
+Develop an algoithm to evaluate prefix expressions.
+
+Is it more complex than evaluating postfix? Why?
+: No, infix to prefix is not much complex than evaluating postfix. 
+Just needs to change the order of String operator and String left & right when pushing them all together on the stack. 
+
+
+Is the resulting assembler more complex?
+: Yes it's more complex. Compared to assembler into postfix, the assembler into prefix should be stored in the vector as reversed way. Since an operator was always an element in the beginning index of infix to prefix, pushing on the stack with resulting the reversed vector will not cause the error by the infix algorithm. 

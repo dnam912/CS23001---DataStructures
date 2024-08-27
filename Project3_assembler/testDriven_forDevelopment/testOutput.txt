@@ -1,0 +1,90 @@
+------------------------------------------------------- 
+Infix: ( AX + ( B * C ) ) ;
+Prefix: + AX * B C
+|   LD   |  C 
+|   MU   |  B
+|   ST   |  TMP1
+|   LD   |  TMP1 
+|   AD   |  AX
+|   ST   |  TMP2
+
+------------------------------------------------------- 
+Infix: 
+( ( AX + ( B * CY ) ) / ( D - E ) ) ;
+Prefix: / + AX * B CY - D E
+|   LD   |  E 
+|   SB   |  D
+|   ST   |  TMP1
+|   LD   |  CY 
+|   MU   |  B
+|   ST   |  TMP2
+|   LD   |  TMP2 
+|   AD   |  AX
+|   ST   |  TMP3
+|   LD   |  TMP1 
+|   DV   |  TMP3
+|   ST   |  TMP4
+
+------------------------------------------------------- 
+Infix: 
+( ( A + B ) * ( C + E ) ) ;
+Prefix: * + A B + C E
+|   LD   |  E 
+|   AD   |  C
+|   ST   |  TMP1
+|   LD   |  B 
+|   AD   |  A
+|   ST   |  TMP2
+|   LD   |  TMP1 
+|   MU   |  TMP2
+|   ST   |  TMP3
+
+------------------------------------------------------- 
+Infix: 
+( AX * ( BX * ( ( ( CY + AY ) + BY ) * CX ) ) ) ;
+Prefix: * AX * BX * + + CY AY BY CX
+|   LD   |  AY 
+|   AD   |  CY
+|   ST   |  TMP1
+|   LD   |  BY 
+|   AD   |  TMP1
+|   ST   |  TMP2
+|   LD   |  CX 
+|   MU   |  TMP2
+|   ST   |  TMP3
+|   LD   |  TMP3 
+|   MU   |  BX
+|   ST   |  TMP4
+|   LD   |  TMP4 
+|   MU   |  AX
+|   ST   |  TMP5
+
+------------------------------------------------------- 
+Infix: 
+( ( H * ( ( ( ( A + ( ( B + C ) * D ) ) * F ) * G ) * E ) ) + J ) ;
+Prefix: + * H * * * + A * + B C D F G E J
+|   LD   |  C 
+|   AD   |  B
+|   ST   |  TMP1
+|   LD   |  D 
+|   MU   |  TMP1
+|   ST   |  TMP2
+|   LD   |  TMP2 
+|   AD   |  A
+|   ST   |  TMP3
+|   LD   |  F 
+|   MU   |  TMP3
+|   ST   |  TMP4
+|   LD   |  G 
+|   MU   |  TMP4
+|   ST   |  TMP5
+|   LD   |  E 
+|   MU   |  TMP5
+|   ST   |  TMP6
+|   LD   |  TMP6 
+|   MU   |  H
+|   ST   |  TMP7
+|   LD   |  J 
+|   AD   |  TMP7
+|   ST   |  TMP8
+
